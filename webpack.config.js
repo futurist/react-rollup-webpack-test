@@ -1,6 +1,8 @@
-const webpack = require('webpack')
+const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
+  mode: "production",
   devtool: 'hidden-source-map',
   entry: './app',
   output: {
@@ -13,26 +15,16 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
+      },
+      {
+        include: [
+          path.resolve(__dirname, "node_modules/react"),
+          path.resolve(__dirname, "node_modules/react-router")
+        ],
+        sideEffects: false
       }
     ]
   },
-  plugins: [
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production')
-    }),
-    new webpack.LoaderOptionsPlugin({
-      minimize: true
-    }),
-    new webpack.optimize.ModuleConcatenationPlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      },
-      output: {
-        comments: false
-      }
-    })
-  ],
   resolve: {
     mainFields: [
       'browser',

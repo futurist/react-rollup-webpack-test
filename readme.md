@@ -12,6 +12,8 @@ Bundle size (bare app and with unused `Link` from `react-router-dom` package):
 | rollup | 0.43.0 | react 15.6.1 + react-router 4.1.1 | 170 kb |
 | webpack | 3.0.0 | react 15.6.1  | 146 kb |
 | webpack | 3.0.0 | react 15.6.1 + react-router 4.1.1 | 186 kb |
+| webpack | 4.0.0-alpha.2 sideEffects | react 15.6.1  | 144 kb |
+| webpack | 4.0.0-alpha.2 sideEffects | react 15.6.1 + react-router 4.1.1 | 144 kb |
 
 ## Results
 

@@ -22,7 +22,8 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-replace": "^1.1.1",
     "rollup-plugin-uglify": "^2.0.1",
-    "webpack": "^3.0.0"
+    "webpack": "^4.0.0-alpha.2",
+    "webpack-cli": "^2.0.1"
   },
   "license": "MIT",
   "private": true
