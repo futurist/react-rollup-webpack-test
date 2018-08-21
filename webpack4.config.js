@@ -31,6 +31,7 @@ module.exports = {
       chunks: 'all'
     }
   },
+  stats: 'verbose',
   resolve: {
     mainFields: [
       'browser',
