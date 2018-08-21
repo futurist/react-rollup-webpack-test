@@ -26,6 +26,11 @@ module.exports = {
       }
     ]
   },
+  optimization: {
+    splitChunks:{
+      chunks: 'all'
+    }
+  },
   resolve: {
     mainFields: [
       'browser',
