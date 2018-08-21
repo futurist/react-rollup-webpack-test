@@ -1,13 +1,14 @@
-const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
   mode: "production",
-  devtool: 'hidden-source-map',
-  entry: './app',
+  devtool: false,
+  entry: {
+    webpack4: './app'
+  },
   output: {
     path: `${__dirname}/build`,
-    filename: 'webpack.js'
+    filename: 'webpack4.js'
   },
   module: {
     rules: [
