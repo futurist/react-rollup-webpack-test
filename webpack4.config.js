@@ -1,4 +1,5 @@
 const path = require('path');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = {
   mode: "production",
@@ -8,7 +9,8 @@ module.exports = {
   },
   output: {
     path: `${__dirname}/build`,
-    filename: 'webpack4.js'
+    filename: 'webpack4.js',
+    chunkFilename: '[name].bundle.js'
   },
   module: {
     rules: [
@@ -26,11 +28,9 @@ module.exports = {
       }
     ]
   },
-  optimization: {
-    splitChunks:{
-      chunks: 'all'
-    }
-  },
+  plugins: [
+    new BundleAnalyzerPlugin()
+  ],
   stats: 'verbose',
   resolve: {
     mainFields: [
