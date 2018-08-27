@@ -5,7 +5,7 @@
     "build:rollup": "rollup -c",
     "build:webpack3": "webpack --config=webpack3.config.js",
     "build:webpack4": "webpack-cli --config=webpack4.config.js",
-    "build": "npm run build:rollup && npm run build:webpack3 && npm run build:webpack4"
+    "build": "npm run build:webpack4"
   },
   "dependencies": {
     "babel-plugin-syntax-dynamic-import": "^6.18.0",

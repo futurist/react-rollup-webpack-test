@@ -9,8 +9,8 @@ module.exports = {
   },
   output: {
     path: `${__dirname}/build`,
-    filename: 'webpack4.js',
-    chunkFilename: '[name].bundle.js'
+    filename: '[name].js',
+    chunkFilename: '[name].[contenthash].bundle.js'
   },
   module: {
     rules: [
@@ -27,6 +27,17 @@ module.exports = {
         sideEffects: false
       }
     ]
+  },
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+      cacheGroups: {
+        venders: {
+          test: /node_modules/,
+          enforce: true
+        }
+      }
+    },
   },
   plugins: [
     new BundleAnalyzerPlugin()
